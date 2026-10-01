@@ -1,0 +1,188 @@
+:root {
+  --color-principal: #3f2c0c;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff8ec;
+  color: var(--color-principal);
+}
+
+header {
+  background-color: #f3e2c7;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+}
+
+nav a {
+  color: var(--color-principal);
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #c49b3f;
+}
+
+.hero {
+  text-align: center;
+  padding: 30px 15px 15px;
+}
+
+.hero h1 {
+  margin-bottom: 8px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.about-us {
+  padding: 0px 15px;
+}
+
+.about-us h2 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.contact {
+  padding: 15px 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0;
+  max-width: 350px;
+  width: 100%;
+}
+
+label {
+  color: var(--color-principal);
+  font-weight: bold;
+}
+
+input,
+textarea {
+  padding: 5px;
+  border: 1px solid var(--color-principal);
+  border-radius: 3px;
+}
+
+button {
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #c49b3f;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--color-principal);
+  color: #ffffff;
+}
+
+section {
+  margin: 32px 0;
+  padding: 16px;
+}
+
+img {
+  width: 150px;
+  height: 200px;
+}
+
+.sabores h2,
+.envases h2,
+.postres h2 {
+  text-align: center;
+  color: var(--color-principal);
+  margin-bottom: 16px;
+}
+
+.sabores .grid,
+.envases .grid,
+.postres .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.sabores article,
+.envases article,
+.postres article {
+  border: 1px solid;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.sabores article:hover,
+.envases article:hover,
+.postres article:hover {
+  transform: scale(1.05);
+}
+
+.sabores img,
+.envases img,
+.postres img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+@media (max-width: 760px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sabores .grid,
+  .envases .grid,
+  .postres .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 460px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  .sabores h2,
+  .envases h2,
+  .postres h2 {
+    font-size: 20px;
+  }
+}
